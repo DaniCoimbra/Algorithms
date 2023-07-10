@@ -1,4 +1,4 @@
-package sorting;
+package search;
 
 public class LinearSearch {
     public static int linearSearch(int[] array, int target){

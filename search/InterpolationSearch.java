@@ -1,4 +1,4 @@
-package sorting;
+package search;
 
 public class InterpolationSearch {
     public static int interpolationSearch(int[] array, int low, int high, int target) {

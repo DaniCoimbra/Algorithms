@@ -1,4 +1,4 @@
-package sorting;
+package search;
 
 public class ExponentialSearch {
     public static int exponentialSearch(int[] array, int low, int high, int target) {

@@ -1,4 +1,4 @@
-package sorting;
+package search;
 
 public class TernarySearch {
     public static int ternarySearch(int[] array, int low, int high, int target) {
