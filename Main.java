@@ -1,10 +1,9 @@
-import sorting.InsertionSort;
-import sorting.SelectionSort;
+import sorting.*;
 
 public class Main {
     public static void main(String[] args){
         int[] array = {3,2,4,1,5};
-        InsertionSort.insertionSort(array);
+        CountSort.countSort(array);
         for(int i = 0; i<array.length; i++){
             System.out.println(array[i]);
         }
