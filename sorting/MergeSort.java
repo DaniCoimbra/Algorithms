@@ -2,8 +2,8 @@ package sorting;
 
 public class MergeSort {
     public static void merge(int[] array, int l, int r, int m) {
-        int half1 = m-l+1;
-        int half2 = r-m;
+        int half1 = m - l + 1;
+        int half2 = r - m;
 
         int left[] = new int[half1];
         int right[] = new int[half2];
@@ -15,12 +15,11 @@ public class MergeSort {
 
         int i = 0, j = 0, k = l;
 
-        while(i<half1 && j < half2) {
+        while (i < half1 && j < half2) {
             if (left[i] <= right[j]) {
                 array[k] = left[i];
                 i++;
-            }
-            else {
+            } else {
                 array[k] = right[j];
                 j++;
             }
@@ -46,7 +45,7 @@ public class MergeSort {
             mergeSort(array, left, mid);
             mergeSort(array, mid + 1, right);
 
-            merge(array,left,right,mid);
+            merge(array, left, right, mid);
         }
     }
 }

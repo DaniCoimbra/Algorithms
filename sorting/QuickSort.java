@@ -2,10 +2,16 @@ package sorting;
 
 public class QuickSort {
     public static void quickSort(int[] array, int low, int high) {
-        if (low < high) {
+        while (low < high) {
             int part = partition(array, low, high);
-            quickSort(array,low,part-1);
-            quickSort(array,part+1,high);
+            if(part - low < high - part) {
+                quickSort(array, low, part - 1);
+                low = part + 1;
+            }
+            else{
+                quickSort(array, part+1, high);
+                high = part - 1;
+            }
         }
     }
 
