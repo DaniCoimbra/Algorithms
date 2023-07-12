@@ -34,10 +34,31 @@
   Space Complexity: O(1)
 
 # 4. Jump Search
- 
+  Jump Search takes √N steps through the array to find the target. Once a jump is larger than the target, it backtracks linearly scanning until target is found. It performs better than linear search, but worst than a logarithmic coomplexity, as it has an O(√N) average case, and only works on sorted lists.
+  
   Time Complexity
       Best Case: O(1)
       Worst Case: O(√N)
-      Average Case: O( √N)
+      Average Case: O(√N)
+
+  Space Complexity: O(1)
+
+# 5. Exponential Search
+  Exponential Search looks for the target within an exponential range. After the range is found, i/2-i, a binary search is called on that range. The algorithm has 2 steps, first searching for the target range, then calling binary search, resulting in an O(logN) time complexity. Exponential Search is useful for unbounded/infinite ranged lists. This algorithm requires the list to be sorted.
+  
+  Time Complexity
+      Best Case: O(1)
+      Worst Case: O(logN)
+      Average Case: O(logN)
+
+  Space Complexity: O(1)
+
+# 6. Ternary Search
+  Ternary Search works similarly to a binary search, as a divisive search algorithm, reducing the search range of target on every iteration. Unlike Binary Search, Ternary Search divises the search range into 3, being more efficient on a log base 3. Ternary Algorithm only works on sorted lists, and when compared to binary search, is more efficient, but is not suitable for non-continuous function as it is based on dividing the search space into 3 parts.
+  
+  Time Complexity
+      Best Case: O(1)
+      Worst Case: O(log_3 N)
+      Average Case: O(log_3 N)
 
   Space Complexity: O(1)
