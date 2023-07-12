@@ -34,11 +34,10 @@
   Space Complexity: O(1)
 
 # 4. Jump Search
-  
-  
-    Time Complexity
+ 
+  Time Complexity
       Best Case: O(1)
       Worst Case: O(√N)
-      Average Case: O(√N)
+      Average Case: O( √N)
 
   Space Complexity: O(1)
