@@ -26,7 +26,7 @@
   pos = low + (target - arr[low]) *(high - low)/(arr[high] - arr[low])
   Interpolation Search works best when the elements in the list are uniformly distributed. It can have a time complexity better than linear search and similar to binary search, with an average and best-case time complexity of O(logN).
   
-    Time Complexity
+  Time Complexity
       Best Case: O(1)
       Worst Case: O(N)
       Average Case: O(log(logN))
