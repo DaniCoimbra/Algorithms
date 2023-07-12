@@ -34,6 +34,7 @@ The algorithm performs 2 inner traverses, resulting in a O(N^2) time complexity,
 
 # 4. Merge Sort
   Merge Sort is a divide and conquer algorithm, that works by breaking the list into smaller pieces and sorting them finally. Thus, it has 2 main phases, merge phase and sort phase. Merge is responsible for the division, continuosly splitting the array into 2 halves. And sort is called on each subarray, merging all of them into a sorted end result. In merge sort, the space complexity is of O(N), as the merged pieces are stored in an auxiliary array.
+  
   Master Theorem: T(n) = 2T(n/2) + O(n)
   
   Time Complexity 
@@ -42,3 +43,18 @@ The algorithm performs 2 inner traverses, resulting in a O(N^2) time complexity,
     Average Case: O(N log N) 
   
   Space Complexity: O(N)
+
+# 5. Quick Sort
+  Quick Sort is a divide and conquer algorithm, that works by continuosly selecting a pivot value, then recursively partitioning around the pivot, sorting elements larger and smaller than the pivot. The efficiency of QuickSort is depends on the pivot choice, a bad choice can lead to an O(N^2) complexity, while an ideal choice can achieve O(N log N). Some pivot choices are: First element, middle element, last element, random element. 
+  Because in quicksort, recursion happens after partition, tail recursion optimization can be applied, thus converting the stack call overhead to a loop.
+  
+  Master Theorem: T(n) = 2T(n/2) + O(n)
+  
+  Time Complexity 
+    Best Case: O(N log N) 
+    Worst Case: O(N log N) 
+    Average Case: O(N log N) 
+  
+  Space Complexity: O(N)
+
+
