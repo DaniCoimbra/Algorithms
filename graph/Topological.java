@@ -1,11 +1,10 @@
 package graph;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class topological {
+public class Topological {
     public static void topologicalSort(Graph graph, Map<Integer,Boolean> visited) {
         List<Integer> stack = new LinkedList<>();
         List<Integer> recursive = new LinkedList<>();

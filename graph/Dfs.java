@@ -1,11 +1,10 @@
 package graph;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class dfs {
+public class Dfs {
     public static void recursiveDFS(Graph graph, int vertex, Map<Integer,Boolean> visited) {
         visited.put(vertex, true);
         System.out.println(vertex + " ");

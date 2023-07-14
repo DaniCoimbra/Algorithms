@@ -1,8 +1,5 @@
 import graph.Graph;
-import graph.bfs;
-import graph.dfs;
-import graph.topological;
-import sorting.*;
+import graph.Topological;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +14,7 @@ public class Main {
         graph.addDirectedEdge(2, 3);
         graph.addDirectedEdge(3, 1);
         Map<Integer, Boolean> visited = new HashMap<Integer, Boolean>();
-        topological.topologicalSort(graph, visited);
+        Topological.topologicalSort(graph, visited);
         //bfs.BFS(graph,0);
     }
 }

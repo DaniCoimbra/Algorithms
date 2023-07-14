@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class bfs {
+public class Bfs {
 
     public static void BFS(Graph graph, int vertex) {
         List<Integer> queue = new LinkedList<Integer>();
