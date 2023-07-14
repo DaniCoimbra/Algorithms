@@ -18,6 +18,9 @@ public class Graph {
         adjacencyList[source].add(destination);
         adjacencyList[destination].add(source);
     }
+    public void addDirectedEdge(int source, int destination) {
+        adjacencyList[source].add(destination);
+    }
 
 
 }
