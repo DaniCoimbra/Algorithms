@@ -5,33 +5,28 @@ import java.util.List;
 import java.util.Map;
 
 public class Topological {
-    public static void topologicalSort(Graph graph, Map<Integer,Boolean> visited) {
+    public static void topologicalSort(Graph graph, Map<Integer, Boolean> visited) {
         List<Integer> stack = new LinkedList<>();
-        List<Integer> recursive = new LinkedList<>();
-        List<Integer> reverse = new LinkedList<>();
 
-        for (int i = 0; i < graph.adjacencyList.length; i++) {
-            if(!visited.containsKey(i)) {
-                recursive.add(i);
-                while(!recursive.isEmpty()) {
-                    int tail = recursive.remove(recursive.size()-1);
-                    reverse.add(tail);
-                    if(!visited.containsKey(tail)) {
-                        visited.put(tail, true);
-                        for (Integer v : graph.adjacencyList[tail]) {
-                            if (!visited.containsKey(v)) {
-                                recursive.add(v);
-                            }
-                        }
-                    }
-                }
-                for (int j = reverse.size()-1; j >=0; j--) {
-                    stack.add(reverse.remove(j));
-                }
+        for (int i = 0; i < graph.numVertices; i++) {
+            if (!visited.containsKey(i)) {
+                topologicalSortUtil(graph, i, visited, stack);
             }
         }
-        for (int j = stack.size()-1; j >=0; j--) {
-            System.out.println(stack.remove(j));
+        while (!stack.isEmpty()) {
+            System.out.print(stack.remove(stack.size()-1));
         }
+    }
+
+    private static void topologicalSortUtil(Graph graph, int vertex, Map<Integer, Boolean> visited, List<Integer> stack) {
+        visited.put(vertex, true);
+
+        for (Integer adjVertex : graph.adjacencyList[vertex]) {
+            if (!visited.containsKey(adjVertex)) {
+                topologicalSortUtil(graph, adjVertex, visited, stack);
+            }
+        }
+
+        stack.add(vertex);
     }
 }
