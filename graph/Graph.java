@@ -21,6 +21,4 @@ public class Graph {
     public void addDirectedEdge(int source, int destination) {
         adjacencyList[source].add(destination);
     }
-
-
 }
