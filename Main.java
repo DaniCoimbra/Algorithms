@@ -1,26 +1,22 @@
-import graph.Dijkstra;
-import graph.Graph;
-import graph.Topological;
-import graph.WeightedGraph;
+import graph.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        WeightedGraph graph = new WeightedGraph(7);
-        graph.addEdge(0, 1, 2);
+        WeightedGraph graph = new WeightedGraph(4);
+        graph.addEdge(0, 1, 10);
+        graph.addEdge(0, 3, 5);
         graph.addEdge(0, 2, 6);
-        graph.addEdge(1, 3, 5);
-        graph.addEdge(2, 3, 8);
-        graph.addEdge(3, 4, 10);
-        graph.addEdge(3, 5, 15);
-        graph.addEdge(4, 6, 2);
-        graph.addEdge(5, 6, 6);
+        graph.addEdge(1, 3, 15);
+        graph.addEdge(2, 3, 4);
 
 
         Map<Integer, Boolean> visited = new HashMap<Integer, Boolean>();
-        Dijkstra.dijkstra(graph,0, visited);
+        Kruskal.kruskal(graph);
+        Prim.prim(graph);
+
         //bfs.BFS(graph,0);
     }
 }
