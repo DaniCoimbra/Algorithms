@@ -40,3 +40,20 @@
 
   Space Complexity: O(V)
 
+# 6. Prim's Algorithm
+  Prim's Algorithm is a MST algorithm, that keeps track of the minimum edge that leads to a unvisited node, and adds it to the spanning tree. The algorithm uses a Priority Queue to keep track of the smallest edge, and performs the update operation on the weights.
+Prim's Algorithm in applicable for both cyclic, uncyclic graphs.
+  
+  Time Complexity
+    Base Case: O((V + E) * log(V))
+
+  Space Complexity: O(V^2)
+
+# 7. Kruskal’s Algorithm
+  Kruskal's Algorithm is a MST algorithm, that works by repeatedly chosing the smallest edge that does not create a cycle. For that, the algorithm sorts the edges by weight and uses of DisjoinSet union-find operations to detect if adding an edge creates a cycle in the spanning tree.
+  
+  Time Complexity
+    Base Case: O(V + E)
+
+  Space Complexity: O(V + E)
+
