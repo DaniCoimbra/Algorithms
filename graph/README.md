@@ -57,3 +57,11 @@ Prim's Algorithm in applicable for both cyclic, uncyclic graphs.
 
   Space Complexity: O(V + E)
 
+# 8. A* Algorithm
+  A* algorithm is a search algorithm, that works by using the distance from start and distance from goal, to choose the optimal path. While dijstra considers the distance from start, and a greedy search only considers the distance from target, A* is a mix of both techniques, by adding a heuristic cost to the update calculation. It has the drawback of space efficiency, since the algorithm does not pre-process the graph, and relies of additional data structures to save the path and costs. But does preset optimal efficiency in practical time complexity.
+  
+  Time Complexity
+    Worst Case: O(B ^ D), depth exponential to the branch factor
+    Base Case: O((V + E) * log(V))
+
+  Space Complexity: O(V)
