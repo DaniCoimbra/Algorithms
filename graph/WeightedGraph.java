@@ -18,6 +18,9 @@ public class WeightedGraph {
         adjacencyList[source].add(new WeightedEdge(source, destination, weight));
         adjacencyList[destination].add(new WeightedEdge(destination,source, weight));
     }
+    public void addDirectedEdge(int source, int destination, int weight) {
+        adjacencyList[source].add(new WeightedEdge(source, destination, weight));
+    }
 
     // WeightedEdge class to store the destination vertex and weight of the edge
     public static class WeightedEdge {
