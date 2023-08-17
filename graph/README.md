@@ -65,3 +65,35 @@ Prim's Algorithm in applicable for both cyclic, uncyclic graphs.
     Base Case: O((V + E) * log(V))
 
   Space Complexity: O(V)
+
+# 9. Floyd-Warshall Algorithm
+  The Floyd Warshall algorithm is a shortest path algorithm, that calculates the shortest-path problem for every two vertices. By maintaining a matrix of shortest distances between each pair of vertices, it calculates the optimal path lengths by considering intermediate vertices. The algorithm works iteratively, systematically evaluating whether a path through a specific vertex k yields a shorter distance between vertices i and j. This dynamic programming approach enables it to efficiently handle both positive and negative edge weights, and it accounts for potential intermediate paths in the shortest distance calculations. The resulting matrix of shortest path distances provides a comprehensive view of the shortest routes between all pairs of vertices in the graph, making it particularly valuable for scenarios where a global understanding of shortest paths is needed.
+  
+  Time Complexity
+    Base Case: O(V^3)
+
+  Space Complexity: O(V^2)
+
+# 10. Johnson's Algorithm
+  The Johnson's algorithm is a shortest path algorithm, that calculates the shortest-path problem for every two vertices. The algorithm uses a combination of BellmanFord and Dijkstra. By adding an extra vertice and applying BellManFord's algorithm to level the edges weightes, all negative edges are properly turned positive. Then, Dijkstra's algorithm is applied to every vertice. This algorithm is more efficient on sparse graphs than Floyd-Warshall's.
+  
+  Time Complexity
+    Base Case: O(V^2 * log(V) + V*E)
+
+  Space Complexity: O(V^2)
+
+# 10. Johnson's Algorithm
+  Johnson's algorithm is an all-pairs shortest path algorithm, that works by combining Bellman-Ford and Dijkstra's algorithms. By introducing an additional vertex and applying Bellman-Ford, it transforms negative edge weights into positive values, thus handling them effectively. This pre-processing step levels the playing field. Then, Dijkstra's algorithm is utilized for each vertex, ensuring optimal shortest paths. Notably useful for sparse graphs, Johnson's approach is a favorable alternative to Floyd-Warshall, offering efficiency while comprehensively addressing the shortest-path challenge for all vertex pairs.
+  
+  Time Complexity
+    Base Case: O(V^2 * log(V) + V*E)
+
+  Space Complexity: O(V^2)
+
+# 11. Ford-Fulkerson Algorithm
+  The Ford-Fulkerson algorithm computes the maximum flow in a network flow graph. It iteratively augments the flow by discovering augmenting paths from the source to the sink using BFS. By incrementing the flow along these paths, the algorithm effectively finds the maximum amount of flow that can be sent from the source to the sink. This process continues until no more augmenting paths can be found. By using BFS, it ensures that the shortest augmenting paths are explored first, leading to an efficient determination of the maximum flow. This algorithm's adaptability to various flow network sizes and structures makes it a fundamental tool for solving maximum flow problems.
+  
+  Time Complexity
+    Base Case: O(V * E^2)
+
+  Space Complexity: O(V)
