@@ -1,18 +1,21 @@
 import graph.*;
+import search.QuickSelect;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        WeightedGraph graph = new WeightedGraph(4);
+        int[] arr = {7, 10, 8, 17, 4, 3, 20, 15};
+        System.out.println(QuickSelect.quickSelect(arr, 3));
+
+        /*WeightedGraph graph = new WeightedGraph(4);
         graph.addDirectedEdge(0, 1, -5);
         graph.addDirectedEdge(0, 3, 3);
         graph.addDirectedEdge(0, 2, 2);
         graph.addDirectedEdge(1, 2, 4);
         graph.addDirectedEdge(2, 3, 1);
-        Johnson.Johnson(graph);
-
+        Johnson.Johnson(graph);*/
         /*int[][] matrix = {
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
